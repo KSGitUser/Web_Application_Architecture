@@ -1,0 +1,8 @@
+1. Паттерн - Фабричны метод реализован с слассами Service\Billing\Card и Service\Billing\BankTransfer
+
+//В том месте где нужно создать класс пишем:
+//$card = new CardPayCreator;
+//echo $card->billsPay(100) . "<br>";
+
+//$bankTransfer = new BankTransferCreator;
+//echo $bankTransfer->billsPay(100) . "<br>";

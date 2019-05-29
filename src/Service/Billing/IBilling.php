@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare (strict_types = 1);
 
 namespace Service\Billing;
 
@@ -17,5 +17,5 @@ interface IBilling
      *
      * @throws BillingException
      */
-    public function pay(float $totalPrice): void;
+    public function pay(float $totalPrice): string;
 }
