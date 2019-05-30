@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare (strict_types = 1);
 
 namespace Service\Communication;
 
@@ -21,4 +21,6 @@ interface ICommunication
      * @throws CommunicationException
      */
     public function process(Model\Entity\User $user, string $templateName, array $params = []): void;
+
+    public function sendText(): void;
 }

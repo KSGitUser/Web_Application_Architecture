@@ -1,8 +1,20 @@
-1. Паттерн - Фабричны метод реализован с слассами Service\Billing\Card и Service\Billing\BankTransfer
+1. Паттерн - Фабричный метод реализован с классами Service\Billing\Card и Service\Billing\BankTransfer
 
 //В том месте где нужно создать класс пишем:
+
 //$card = new CardPayCreator;
 //echo $card->billsPay(100) . "<br>";
 
 //$bankTransfer = new BankTransferCreator;
 //echo $bankTransfer->billsPay(100) . "<br>";
+
+2. Паттерн - Абстрактная фабрика реализован с классами в директории Service\Comminication
+
+//В том месте где нужно создать класс пишем:
+
+//$messageToUser = new SendMessage();
+//$messageToUser->createMessage(new EmailMessageFactory);
+
+//echo "<br>";
+
+//$messageToUser->createMessage(new SmsMessageFactory);
