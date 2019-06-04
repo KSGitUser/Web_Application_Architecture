@@ -17,7 +17,7 @@ class CheckoutFacade
   protected $process;
   protected $session;
 
-  public function __construct(SessionInterface $session)
+  public function __construct($session)
   {
     $this->billing = new Card();
     $this->discount = new NullObject();
@@ -33,7 +33,7 @@ class CheckoutFacade
     );
   }
 
-  public function checkout(): void
+  public function checkout()
   {
     $this->process->checkoutProcess();
   }

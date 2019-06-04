@@ -28,9 +28,9 @@ class Basket
     private $session;
 
     /**
-     * @param SessionInterface $session
+     * @param $session
      */
-    public function __construct(SessionInterface $session)
+    public function __construct($session)
     {
         $this->session = $session;
     }

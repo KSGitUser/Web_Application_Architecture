@@ -2,6 +2,8 @@
 
 namespace Service\Order;
 
+use Service\Order\Basket;
+
 /**
  * Проведение всех этапов заказа
  *
@@ -19,20 +21,19 @@ class checkoutProcess
   protected $communication;
   protected $basket;
   protected $session;
-  protected $basket;
 
 
   public function __construct(
-    IDiscount $discount,
-    IBilling $billing,
-    ISecurity $security,
-    ICommunication $communication,
-    SessionInterface $session
+    $discount,
+    $billing,
+    $security,
+    $communication,
+    $session
   ) {
     $this->discount = $discount;
     $this->billing = $billing;
     $this->security = $security;
-    $this->comminucation = $communication;
+    $this->communication = $communication;
     $this->session = $session;
     $this->basket = new Basket($this->session);
   }
