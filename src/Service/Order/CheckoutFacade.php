@@ -3,14 +3,9 @@
 namespace Service\Order;
 
 use Service\Billing\Card;
-
 use Service\Communication\Email;
-
-
 use Service\Discount\NullObject;
-
 use Service\User\Security;
-
 
 class CheckoutFacade
 {
