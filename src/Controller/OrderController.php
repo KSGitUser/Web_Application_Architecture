@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare (strict_types = 1);
 
 namespace Controller;
 
@@ -9,6 +9,7 @@ use Service\Order\Basket;
 use Service\User\Security;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Service\Order\CheckoutFacade;
 
 class OrderController
 {
@@ -45,7 +46,7 @@ class OrderController
             return $this->redirect('user_authentication');
         }
 
-        (new Basket($request->getSession()))->checkout();
+        (new CheckoutFacade($request->getSession()))->checkout();
 
         return $this->render('order/checkout.html.php');
     }

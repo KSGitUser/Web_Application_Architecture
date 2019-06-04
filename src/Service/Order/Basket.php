@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare (strict_types = 1);
 
 namespace Service\Order;
 
@@ -79,7 +79,7 @@ class Basket
      *
      * @return void
      */
-    public function checkout(): void
+    /*   public function checkout(): void
     {
         // Здесь должна быть некоторая логика выбора способа платежа
         $billing = new Card();
@@ -93,7 +93,7 @@ class Basket
         $security = new Security($this->session);
 
         $this->checkoutProcess($discount, $billing, $security, $communication);
-    }
+    } */
 
     /**
      * Проведение всех этапов заказа
@@ -104,7 +104,7 @@ class Basket
      * @param ICommunication $communication
      * @return void
      */
-    public function checkoutProcess(
+    /* public function checkoutProcess(
         IDiscount $discount,
         IBilling $billing,
         ISecurity $security,
@@ -122,7 +122,7 @@ class Basket
 
         $user = $security->getUser();
         $communication->process($user, 'checkout_template');
-    }
+    } */
 
     /**
      * Фабричный метод для репозитория Product

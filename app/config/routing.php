@@ -14,6 +14,13 @@ $routes->add(
 );
 
 $routes->add(
+    'vk',
+    new Route('/vk', ['_controller' => [MainController::class, 'vkAction']])
+);
+
+
+
+$routes->add(
     'product_list',
     new Route('/product/list', ['_controller' => [ProductController::class, 'listAction']])
 );
