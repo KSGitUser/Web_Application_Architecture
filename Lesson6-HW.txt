@@ -1,0 +1,14 @@
+1.Найдите в проекте паттерн Шаблонный метод (Template Method). Напишите, в каком классе и методе он применён.
+В проекте в фабричном методе реализован частный случай Шаблонного метода
+класс - Service\Billing\BillingCreator
+метод - factoryMethod()
+
+2. На странице продуктов (/product/list) добавить сортировку курсов, используя паттерн Стратегия (Strategy).
+
+реализовано в папке - src\Service\Product
+
+$className = "\Service\Product\SortBy" . $sortType;
+        if (class_exists($className)) {
+            $context = new Context(new $className());
+            $productList = $context->doSort($productList);
+        }

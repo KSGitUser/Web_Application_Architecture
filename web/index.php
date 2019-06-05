@@ -9,6 +9,7 @@ use Service\Communication\EmailMessageFactory;
 use Service\Communication\SmsMessageFactory;
 use Service\SocialNetwork\VkApi;
 use VK\Client\VKApiClient;
+use Service\Product\Product;
 
 require_once __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
 
@@ -30,6 +31,13 @@ echo "<br>";
 $messageToUser->createMessage(new SmsMessageFactory); */
 
 
+//применение паттерна Стратегия
+/* $product = new Product();
+$productsSortedByName = $product->getAll("Name");
+var_dump($productsSortedByName);
+$productsSortedByPrice = $product->getAll("Price");
+var_dump($productsSortedByPrice);
+exit(); */
 
 
 

@@ -14,12 +14,12 @@ class Product
     /**
      * @var string
      */
-    private $name;
+    public $name;
 
     /**
      * @var float
      */
-    private $price;
+    public $price;
 
     /**
      * @param int $id
